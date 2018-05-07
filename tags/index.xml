@@ -6,9 +6,19 @@
     <description>Recent content in Tags on やないさん家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 07 May 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://lacty.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cpp</title>
+      <link>https://lacty.github.io/tags/cpp/</link>
+      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://lacty.github.io/tags/cpp/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
