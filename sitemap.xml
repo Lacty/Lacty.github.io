@@ -3,50 +3,50 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://lacty.github.io/blog/blog/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AE%E5%A1%A9%E3%83%91%E3%83%B3%E4%BD%9C%E3%82%8A/</loc>
+    <loc>/blog/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AE%E5%A1%A9%E3%83%91%E3%83%B3%E4%BD%9C%E3%82%8A/</loc>
     <lastmod>2018-05-08T20:08:37+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://lacty.github.io/blog/blog/</loc>
-    <lastmod>2018-05-08T20:08:37+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lacty.github.io/blog/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lacty.github.io/blog/contact/</loc>
-  </url>
-  
-  <url>
-    <loc>https://lacty.github.io/blog/tags/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://lacty.github.io/blog/</loc>
+    <loc>/blog/</loc>
     <lastmod>2018-05-08T20:08:37+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lacty.github.io/blog/tags/%E3%83%91%E3%83%B3/</loc>
+    <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
     <lastmod>2018-05-08T20:08:37+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lacty.github.io/blog/tags/%E3%83%91%E3%83%B3%E4%BD%9C%E3%82%8A/</loc>
+    <loc>/tags/%E3%83%91%E3%83%B3/</loc>
     <lastmod>2018-05-08T20:08:37+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://lacty.github.io/blog/categories/%E9%A3%9F%E3%81%B9%E7%89%A9/</loc>
+    <loc>/tags/%E3%83%91%E3%83%B3%E4%BD%9C%E3%82%8A/</loc>
+    <lastmod>2018-05-08T20:08:37+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/%E9%A3%9F%E3%81%B9%E7%89%A9/</loc>
     <lastmod>2018-05-08T20:08:37+09:00</lastmod>
     <priority>0</priority>
   </url>
