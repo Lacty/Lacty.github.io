@@ -35,14 +35,5 @@
    </description>
     </item>
     
-    <item>
-      <title>[CPP] Hello World</title>
-      <link>https://lacty.github.io/blog/helloworld/</link>
-      <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://lacty.github.io/blog/helloworld/</guid>
-      <description>#include &amp;lt;iostream&amp;gt; int main() { std::cout &amp;lt;&amp;lt; &amp;quot;Hello World\n&amp;quot;; }  </description>
-    </item>
-    
   </channel>
 </rss>
