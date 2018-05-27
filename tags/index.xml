@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on やないさん家</title>
-    <link>/tags/</link>
+    <link>/blog/tags/</link>
     <description>Recent content in Tags on やないさん家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/blog/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>パン</title>
-      <link>/tags/%E3%83%91%E3%83%B3/</link>
+      <link>/blog/tags/%E3%83%91%E3%83%B3/</link>
       <pubDate>Tue, 08 May 2018 20:08:37 +0900</pubDate>
       
-      <guid>/tags/%E3%83%91%E3%83%B3/</guid>
+      <guid>/blog/tags/%E3%83%91%E3%83%B3/</guid>
       <description></description>
     </item>
     
     <item>
       <title>パン作り</title>
-      <link>/tags/%E3%83%91%E3%83%B3%E4%BD%9C%E3%82%8A/</link>
+      <link>/blog/tags/%E3%83%91%E3%83%B3%E4%BD%9C%E3%82%8A/</link>
       <pubDate>Tue, 08 May 2018 20:08:37 +0900</pubDate>
       
-      <guid>/tags/%E3%83%91%E3%83%B3%E4%BD%9C%E3%82%8A/</guid>
+      <guid>/blog/tags/%E3%83%91%E3%83%B3%E4%BD%9C%E3%82%8A/</guid>
       <description></description>
     </item>
     
