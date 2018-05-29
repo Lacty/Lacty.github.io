@@ -6,9 +6,28 @@
     <description>Recent content in Tags on やないさん家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 28 May 2018 22:33:39 +0900</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Clojure</title>
+      <link>/tags/clojure/</link>
+      <pubDate>Mon, 28 May 2018 22:33:39 +0900</pubDate>
+      
+      <guid>/tags/clojure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spacemacs</title>
+      <link>/tags/spacemacs/</link>
+      <pubDate>Mon, 28 May 2018 22:33:39 +0900</pubDate>
+      
+      <guid>/tags/spacemacs/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>パン</title>
