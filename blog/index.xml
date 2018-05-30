@@ -17,7 +17,7 @@
       <pubDate>Mon, 28 May 2018 22:33:39 +0900</pubDate>
       
       <guid>/blog/%E4%BF%BA%E3%81%A7%E3%82%82%E3%82%8F%E3%81%8B%E3%82%8Bspacemacs%E3%81%A7%E5%A7%8B%E3%82%81%E3%82%8Bclojure_001/</guid>
-      <description>下書きDeath 環境 俺氏はFedora28で環境構築します
+      <description>環境 俺氏はFedora28で環境構築します
 パッケージ管理のコマンドはdnfなので環境の違う読者は適所置き換えて読んで下さい
 例えばUbuntuの場合はaptです
 Leiningenのインストール Leiningenについて Clojureのビルドツールです
@@ -25,26 +25,20 @@ Leiningenのインストール Leiningenについて Clojureのビルドツー�
 プロジェクト開発の手助けをしてくれます。
 https://leiningen.org/ 
  スクリプトのダウンロード
-wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
- leinスクリプトを実行できるようにパスの通ったディレクトリに移動させる
+wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein  leinスクリプトを実行できるようにパスの通ったディレクトリに移動させる
 普通のLinuxであれば~/binにパスが通っているので以下のコマンドを使います
-mv lein ~/bin
- leinスクリプトにコマンド実行権限を与える
-chmod a+x ~/bin/lein
- 必要なパッケージをダウンロードする
-lein
-  -vオプションを付けるとLeiningenやJavaのバージョンを確認できます
+mv lein ~/bin  leinスクリプトにコマンド実行権限を与える
+chmod a+x ~/bin/lein  必要なパッケージをダウンロードする
+lein   -vオプションを付けるとLeiningenやJavaのバージョンを確認できます
 $ lein -v Leiningen 2.8.1 on Java 1.8.0_171 OpenJDK 64-Bit Server VM  Spacemacsのインストール Spacemacsについて EmacsとVimのいいとこ取りをしたEmacsベースのテキストエディタです
 名前の通りSpaceKeyを軸にしたコマンドが特徴で
 キーバインドが表示されるので初心者にもやさしくなっています 
  Emacsのインストール
-sudo dnf install emacs
- Spacemacsから.emacs.dをダウンロード
-git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
- 必要なパッケージをインストール
+sudo dnf install emacs  Spacemacsから.emacs.dをダウンロード
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d  必要なパッケージをインストール
 emacsの初回起動emacsでうまくインストールができなかった場合は
 HTTPSを無効にするオプション--insecureを付けて再度実行
-emacs --insecure</description>
+emacs --insecure      dotspacemacs/layersにClojureを追加 Spacemacsの設定ファイル.</description>
     </item>
     
     <item>

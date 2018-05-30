@@ -13,7 +13,7 @@
         "articleSection" : "blog",
         "name" : "#1 俺でもわかるSpacemacsで始めるClojure",
         "headline" : "#1 俺でもわかるSpacemacsで始めるClojure",
-        "description" : "プロジェクト作成からREPL起動まで",
+        "description" : "Spacemacsのインストールと設定、プロジェクトの作成からビルド、REPLの起動まで",
         "inLanguage" : "en",
         "author" : "",
         "creator" : "",
@@ -24,8 +24,8 @@
         "datePublished": "2018-05-28 22:33:39 &#43;0900 JST",
         "dateModified" : "2018-05-28 22:33:39 &#43;0900 JST",
         "url" : "/blog/%E4%BF%BA%E3%81%A7%E3%82%82%E3%82%8F%E3%81%8B%E3%82%8Bspacemacs%E3%81%A7%E5%A7%8B%E3%82%81%E3%82%8Bclojure_001/",
-        "wordCount" : "58",
-        "keywords" : [ "Spacemacs","Clojure","Blog" ]
+        "wordCount" : "78",
+        "keywords" : [ "Spacemacs","Clojure","Leiningen","Blog" ]
     }
     </script>
         
@@ -44,16 +44,16 @@
             <meta name="author" content="やない">
         
         
-            <meta name="description" content="プロジェクト作成からREPL起動まで">
+            <meta name="description" content="Spacemacsのインストールと設定、プロジェクトの作成からビルド、REPLの起動まで">
         
 
         <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="#1 俺でもわかるSpacemacsで始めるClojure"/>
-<meta name="twitter:description" content="プロジェクト作成からREPL起動まで"/>
+<meta name="twitter:description" content="Spacemacsのインストールと設定、プロジェクトの作成からビルド、REPLの起動まで"/>
 <meta name="twitter:site" content="@Lost206"/>
 
         <meta property="og:title" content="#1 俺でもわかるSpacemacsで始めるClojure" />
-<meta property="og:description" content="プロジェクト作成からREPL起動まで" />
+<meta property="og:description" content="Spacemacsのインストールと設定、プロジェクトの作成からビルド、REPLの起動まで" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/blog/%E4%BF%BA%E3%81%A7%E3%82%82%E3%82%8F%E3%81%8B%E3%82%8Bspacemacs%E3%81%A7%E5%A7%8B%E3%82%81%E3%82%8Bclojure_001/" />
 
@@ -79,16 +79,16 @@
         <meta property="og:image:height" content="512">
         
 <meta itemprop="name" content="#1 俺でもわかるSpacemacsで始めるClojure">
-<meta itemprop="description" content="プロジェクト作成からREPL起動まで">
+<meta itemprop="description" content="Spacemacsのインストールと設定、プロジェクトの作成からビルド、REPLの起動まで">
 
 
 <meta itemprop="datePublished" content="2018-05-28T22:33:39&#43;09:00" />
 <meta itemprop="dateModified" content="2018-05-28T22:33:39&#43;09:00" />
-<meta itemprop="wordCount" content="58">
+<meta itemprop="wordCount" content="78">
 
 
 
-<meta itemprop="keywords" content="Spacemacs,Clojure," />
+<meta itemprop="keywords" content="Spacemacs,Clojure,Leiningen," />
 
         
 
@@ -366,10 +366,11 @@
   <header>
     <div class="title">
         
-            <h2><a href="/blog/%E4%BF%BA%E3%81%A7%E3%82%82%E3%82%8F%E3%81%8B%E3%82%8Bspacemacs%E3%81%A7%E5%A7%8B%E3%82%81%E3%82%8Bclojure_001/">#1 俺でもわかるSpacemacsで始めるClojure</a></h2>
+            <h1><a href="/blog/%E4%BF%BA%E3%81%A7%E3%82%82%E3%82%8F%E3%81%8B%E3%82%8Bspacemacs%E3%81%A7%E5%A7%8B%E3%82%81%E3%82%8Bclojure_001/">#1 俺でもわかるSpacemacsで始めるClojure</a></h1>
+            
         
         
-            <p>プロジェクト作成からREPL起動まで</p>
+            <p>Spacemacsのインストールと設定、プロジェクトの作成からビルド、REPLの起動まで</p>
         
     </div>
     <div class="meta">
@@ -454,8 +455,6 @@
   <div id="content">
     
 
-<h1 id="下書きdeath">下書きDeath</h1>
-
 <h1 id="環境">環境</h1>
 
 <p>俺氏は<strong>Fedora28</strong>で環境構築します<br />
@@ -472,18 +471,26 @@ Clojureのビルドツールです<br />
 </details></p>
 
 <ol>
-<li><p>スクリプトのダウンロード<br />
-<code>wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein</code></p></li>
+<li><p>スクリプトのダウンロード</p>
+
+<pre><code>wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+</code></pre></li>
 
 <li><p>leinスクリプトを実行できるようにパスの通ったディレクトリに移動させる<br />
-普通のLinuxであれば<strong>~/bin</strong>にパスが通っているので以下のコマンドを使います<br />
-<code>mv lein ~/bin</code></p></li>
+普通のLinuxであれば<strong>~/bin</strong>にパスが通っているので以下のコマンドを使います</p>
 
-<li><p>leinスクリプトにコマンド実行権限を与える<br />
-<code>chmod a+x ~/bin/lein</code></p></li>
+<pre><code>mv lein ~/bin
+</code></pre></li>
 
-<li><p>必要なパッケージをダウンロードする<br />
-<code>lein</code></p></li>
+<li><p>leinスクリプトにコマンド実行権限を与える</p>
+
+<pre><code>chmod a+x ~/bin/lein
+</code></pre></li>
+
+<li><p>必要なパッケージをダウンロードする</p>
+
+<pre><code>lein
+</code></pre></li>
 </ol>
 
 <p><code>-v</code>オプションを付けるとLeiningenやJavaのバージョンを確認できます</p>
@@ -501,16 +508,22 @@ EmacsとVimのいいとこ取りをしたEmacsベースのテキストエディ�
 </details></p>
 
 <ol>
-<li><p>Emacsのインストール<br />
-<code>sudo dnf install emacs</code></p></li>
+<li><p>Emacsのインストール</p>
 
-<li><p>Spacemacsから.emacs.dをダウンロード<br />
-<code>git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d</code></p></li>
+<pre><code>sudo dnf install emacs
+</code></pre></li>
+
+<li><p>Spacemacsから.emacs.dをダウンロード</p>
+
+<pre><code>git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+</code></pre></li>
 
 <li><p>必要なパッケージをインストール<br />
 emacsの初回起動<code>emacs</code>でうまくインストールができなかった場合は<br />
-HTTPSを無効にするオプション<code>--insecure</code>を付けて再度実行<br />
-<code>emacs --insecure</code></p></li>
+HTTPSを無効にするオプション<code>--insecure</code>を付けて再度実行</p>
+
+<pre><code>emacs --insecure
+</code></pre></li>
 </ol>
 
 
@@ -568,6 +581,26 @@ HTTPSを無効にするオプション<code>--insecure</code>を付けて再度�
 
 
 
+<h1 id="dotspacemacs-layersにclojureを追加">dotspacemacs/layersにClojureを追加</h1>
+
+<p>Spacemacsの設定ファイル<code>.spacemacs</code>にClojureの設定を追加すると<br />
+<code>.clj</code>を開いた際にClojure用のコマンドが使用できるようになります</p>
+
+<ol>
+<li><p><code>SPC f e d</code>で.spacemacsファイルを開く<br />
+emacsを開いてコマンドを打ちます、<code>SPC</code>は<strong>SpaceKey</strong>の意<br />
+<strong>f</strong>ile <strong>e</strong>macs <strong>d</strong>otfile のように分かりやすくなっている</p></li>
+
+<li><p><code>dotspacemacs/layers</code>関数内の<code>dotspacemacs-configuration-layers</code>に<code>clojure</code>を追加
+編集モードへの移行は<code>i</code></p></li>
+
+<li><p><code>SPC f e R</code>で設定をリロード
+編集モードからは<code>ESC</code>で抜けれます</p></li>
+</ol>
+
+<p>これでClojureをSpacemacsで書くための設定は済みました<br />
+次はClojureのプロジェクトを作成しましょう。</p>
+
   </div>
 
   <footer>
@@ -598,6 +631,9 @@ HTTPSを無効にするオプション<code>--insecure</code>を付けて再度�
                 
                 
                 <li><a class="article-category-link" href="/tags/clojure">Clojure</a></li>
+                
+                
+                <li><a class="article-category-link" href="/tags/leiningen">Leiningen</a></li>
                 
             
         
@@ -810,9 +846,6 @@ HTTPSを無効にするオプション<code>--insecure</code>を付けて再度�
 
 
 
-  
-  
-    
   
 
 

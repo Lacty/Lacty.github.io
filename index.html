@@ -292,7 +292,7 @@
             <h2><a href="/blog/%E4%BF%BA%E3%81%A7%E3%82%82%E3%82%8F%E3%81%8B%E3%82%8Bspacemacs%E3%81%A7%E5%A7%8B%E3%82%81%E3%82%8Bclojure_001/">#1 俺でもわかるSpacemacsで始めるClojure</a></h2>
         
         
-            <p>プロジェクト作成からREPL起動まで</p>
+            <p>Spacemacsのインストールと設定、プロジェクトの作成からビルド、REPLの起動まで</p>
         
     </div>
     <div class="meta">
@@ -377,8 +377,6 @@
   <div id="content">
     
 
-<h1 id="下書きdeath">下書きDeath</h1>
-
 <h1 id="環境">環境</h1>
 
 <p>俺氏は<strong>Fedora28</strong>で環境構築します<br />
@@ -395,18 +393,26 @@ Clojureのビルドツールです<br />
 </details></p>
 
 <ol>
-<li><p>スクリプトのダウンロード<br />
-<code>wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein</code></p></li>
+<li><p>スクリプトのダウンロード</p>
+
+<pre><code>wget https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+</code></pre></li>
 
 <li><p>leinスクリプトを実行できるようにパスの通ったディレクトリに移動させる<br />
-普通のLinuxであれば<strong>~/bin</strong>にパスが通っているので以下のコマンドを使います<br />
-<code>mv lein ~/bin</code></p></li>
+普通のLinuxであれば<strong>~/bin</strong>にパスが通っているので以下のコマンドを使います</p>
 
-<li><p>leinスクリプトにコマンド実行権限を与える<br />
-<code>chmod a+x ~/bin/lein</code></p></li>
+<pre><code>mv lein ~/bin
+</code></pre></li>
 
-<li><p>必要なパッケージをダウンロードする<br />
-<code>lein</code></p></li>
+<li><p>leinスクリプトにコマンド実行権限を与える</p>
+
+<pre><code>chmod a+x ~/bin/lein
+</code></pre></li>
+
+<li><p>必要なパッケージをダウンロードする</p>
+
+<pre><code>lein
+</code></pre></li>
 </ol>
 
 <p><code>-v</code>オプションを付けるとLeiningenやJavaのバージョンを確認できます</p>
@@ -424,16 +430,22 @@ EmacsとVimのいいとこ取りをしたEmacsベースのテキストエディ�
 </details></p>
 
 <ol>
-<li><p>Emacsのインストール<br />
-<code>sudo dnf install emacs</code></p></li>
+<li><p>Emacsのインストール</p>
 
-<li><p>Spacemacsから.emacs.dをダウンロード<br />
-<code>git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d</code></p></li>
+<pre><code>sudo dnf install emacs
+</code></pre></li>
+
+<li><p>Spacemacsから.emacs.dをダウンロード</p>
+
+<pre><code>git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+</code></pre></li>
 
 <li><p>必要なパッケージをインストール<br />
 emacsの初回起動<code>emacs</code>でうまくインストールができなかった場合は<br />
-HTTPSを無効にするオプション<code>--insecure</code>を付けて再度実行<br />
-<code>emacs --insecure</code></p></li>
+HTTPSを無効にするオプション<code>--insecure</code>を付けて再度実行</p>
+
+<pre><code>emacs --insecure
+</code></pre></li>
 </ol>
 
 
@@ -491,6 +503,26 @@ HTTPSを無効にするオプション<code>--insecure</code>を付けて再度�
 
 
 
+<h1 id="dotspacemacs-layersにclojureを追加">dotspacemacs/layersにClojureを追加</h1>
+
+<p>Spacemacsの設定ファイル<code>.spacemacs</code>にClojureの設定を追加すると<br />
+<code>.clj</code>を開いた際にClojure用のコマンドが使用できるようになります</p>
+
+<ol>
+<li><p><code>SPC f e d</code>で.spacemacsファイルを開く<br />
+emacsを開いてコマンドを打ちます、<code>SPC</code>は<strong>SpaceKey</strong>の意<br />
+<strong>f</strong>ile <strong>e</strong>macs <strong>d</strong>otfile のように分かりやすくなっている</p></li>
+
+<li><p><code>dotspacemacs/layers</code>関数内の<code>dotspacemacs-configuration-layers</code>に<code>clojure</code>を追加
+編集モードへの移行は<code>i</code></p></li>
+
+<li><p><code>SPC f e R</code>で設定をリロード
+編集モードからは<code>ESC</code>で抜けれます</p></li>
+</ol>
+
+<p>これでClojureをSpacemacsで書くための設定は済みました<br />
+次はClojureのプロジェクトを作成しましょう。</p>
+
   </div>
 
   <footer>
@@ -521,6 +553,9 @@ HTTPSを無効にするオプション<code>--insecure</code>を付けて再度�
                 
                 
                 <li><a class="article-category-link" href="/tags/clojure">Clojure</a></li>
+                
+                
+                <li><a class="article-category-link" href="/tags/leiningen">Leiningen</a></li>
                 
             
         
@@ -811,7 +846,7 @@ HTTPSを無効にするオプション<code>--insecure</code>を付けて再度�
         
 
         <a href="/blog/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AE%E5%A1%A9%E3%83%91%E3%83%B3%E4%BD%9C%E3%82%8A/" class="image featured">
-            <img src="/img/2018/052018/05/%e3%81%af%e3%81%98%e3%82%81%e3%81%a6%e3%81%ae%e5%a1%a9%e3%83%91%e3%83%b3%e4%bd%9c%e3%82%8a/pic_01.JPG" alt="">
+            <img src="/date2018/05/%e3%81%af%e3%81%98%e3%82%81%e3%81%a6%e3%81%ae%e5%a1%a9%e3%83%91%e3%83%b3%e4%bd%9c%e3%82%8a/pic_01.JPG" alt="">
         </a>
     
 
