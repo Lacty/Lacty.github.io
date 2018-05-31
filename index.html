@@ -514,10 +514,9 @@ emacsを開いてコマンドを打ちます、<code>SPC</code>は<strong>SpaceK
 <strong>f</strong>ile <strong>e</strong>macs <strong>d</strong>otfile のように分かりやすくなっている</p></li>
 
 <li><p><code>dotspacemacs/layers</code>関数内の<code>dotspacemacs-configuration-layers</code>に<code>clojure</code>を追加<br />
-編集モードへの移行は<code>i</code></p></li>
+編集モードへの移行は<code>i</code>、<code>ESC</code>で抜けれます</p></li>
 
-<li><p><code>SPC f e R</code>で設定をリロード<br />
-編集モードからは<code>ESC</code>で抜けれます</p></li>
+<li><p><code>SPC f e R</code>で設定をリロード</p></li>
 </ol>
 
 
@@ -585,7 +584,22 @@ emacsを開いてコマンドを打ちます、<code>SPC</code>は<strong>SpaceK
 <pre><code>lein new project-name
 </code></pre>
 
-<p>Spacemacsから<code>SPC !</code>コマンドでshellが実行できます<br />
+<p>Spacemacsからは<code>SPC !</code>コマンドでshellが実行できます</p>
+
+<h1 id="neotreeの起動">NeoTreeの起動</h1>
+
+<p><details open><summary>NeoTreeについて</summary>
+vimmerならお馴染み<br />
+ディレクトリ構成をツリー状に表示してくれるスグレモノ<br />
+</details></p>
+
+<p>Spacemacsで作業する上でNeoTreeは欠かせません<br />
+起動したらまず最初に打ち込みましょう</p>
+
+<pre><code>SPC f t
+</code></pre>
+
+<p><code>lein</code>で作成した<code>test01</code>プロジェクトを開いた様子<br />
 
 
 
@@ -628,8 +642,8 @@ emacsを開いてコマンドを打ちます、<code>SPC</code>は<strong>SpaceK
         
             
                 
-                        <img src='/img/2018/05/%e4%bf%ba%e3%81%a7%e3%82%82%e3%82%8f%e3%81%8b%e3%82%8bSpacemacs%e3%81%a7%e5%a7%8b%e3%82%81%e3%82%8bClojure_001/pic03.png'
-                            alt="pic03.png">
+                        <img src='/img/2018/05/%e4%bf%ba%e3%81%a7%e3%82%82%e3%82%8f%e3%81%8b%e3%82%8bSpacemacs%e3%81%a7%e5%a7%8b%e3%82%81%e3%82%8bClojure_001/pic04.png'
+                            alt="pic04.png">
                     </span></div>
                 
                 
@@ -642,6 +656,84 @@ emacsを開いてコマンドを打ちます、<code>SPC</code>は<strong>SpaceK
 </p>
 
 <h1 id="nrelp接続とコードの実行">nRELP接続とコードの実行</h1>
+
+<p><details open><summary>nREPLについて</summary>
+REPL(<strong>R</strong>ead <strong>E</strong>val <strong>P</strong>rint <strong>L</strong>oop)<br />
+nREPL is <strong>n</strong>etwork REPL (Githubより<br />
+読んで評価して表示してを繰り返す<br />
+</details></p>
+
+<p>俺氏にはよくわからないので実際に触ってみる</p>
+
+<ol>
+<li><p>nREPL接続<br />
+<strong>.clj</strong>ファイルを開いた状態でコマンドを実行してください</p>
+
+<pre><code>SPC m s i
+</code></pre></li>
+
+<li><p>REPLへバッファを切り替え<br />
+<code>SPC m s s</code>コマンドでコードとREPLを切り替えできます</p></li>
+</ol>
+
+
+
+
+    
+
+    
+    
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+    
+
+    <div class="box alt">
+        <div class="row uniform">
+        
+        
+        
+            
+                <div class="4u">
+            
+            
+        
+            
+                
+                    
+                    <span class="image fit">
+                
+            
+            
+        
+            
+                
+                        <img src='/img/2018/05/%e4%bf%ba%e3%81%a7%e3%82%82%e3%82%8f%e3%81%8b%e3%82%8bSpacemacs%e3%81%a7%e5%a7%8b%e3%82%81%e3%82%8bClojure_001/pic05.png'
+                            alt="pic05.png">
+                    </span></div>
+                
+                
+            
+            
+        
+        </div>
+    </div>
+
+
+
+<p>これでClojureをSpacemacsで実行できるようになりました<br />
+他にもSpacemacsでできることはたくさんありますが、今回はこのへんで<br />
+お疲れ様でした。</p>
 
   </div>
 
@@ -966,7 +1058,7 @@ emacsを開いてコマンドを打ちます、<code>SPC</code>は<strong>SpaceK
         
 
         <a href="/blog/%E3%81%AF%E3%81%98%E3%82%81%E3%81%A6%E3%81%AE%E5%A1%A9%E3%83%91%E3%83%B3%E4%BD%9C%E3%82%8A/" class="image featured">
-            <img src="/date2018/05/%e3%81%af%e3%81%98%e3%82%81%e3%81%a6%e3%81%ae%e5%a1%a9%e3%83%91%e3%83%b3%e4%bd%9c%e3%82%8a/pic_01.JPG" alt="">
+            <img src="/img/2018/05/%e3%81%af%e3%81%98%e3%82%81%e3%81%a6%e3%81%ae%e5%a1%a9%e3%83%91%e3%83%b3%e4%bd%9c%e3%82%8a/pic_01.JPG" alt="">
         </a>
     
 
